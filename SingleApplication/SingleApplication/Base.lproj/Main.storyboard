@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SingleApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W45-XI-GfB">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="HelloIosDevs" id="0T5-ve-erd">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="3ru-2Y-PfW">
+                                            <connections>
+                                                <action selector="trashAction:" destination="BYZ-38-t0r" id="clW-An-jcx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VVI-Ac-CbI">
+                                            <connections>
+                                                <action selector="addAction:" destination="BYZ-38-t0r" id="GXv-me-mGj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajf-Ha-BTL">
+                                <rect key="frame" x="20" y="83" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your development skill level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL1-vE-IMU">
+                                <rect key="frame" x="20" y="169" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VC1-u4-rSJ">
+                                <rect key="frame" x="20" y="117" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExitAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="CZd-8i-Cxw"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="u3d-XK-CBt">
+                                <rect key="frame" x="18" y="213" width="564" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBY-Ub-byE">
+                                <rect key="frame" x="20" y="273" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VC1-u4-rSJ" firstAttribute="trailing" secondItem="u3d-XK-CBt" secondAttribute="trailing" id="3DU-gk-h4X"/>
+                            <constraint firstItem="W45-XI-GfB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6eF-Sm-DHA"/>
+                            <constraint firstItem="W45-XI-GfB" firstAttribute="centerX" secondItem="VC1-u4-rSJ" secondAttribute="centerX" id="8h5-1J-Hts"/>
+                            <constraint firstItem="Ajf-Ha-BTL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8vQ-eN-hxB"/>
+                            <constraint firstItem="u3d-XK-CBt" firstAttribute="top" secondItem="GL1-vE-IMU" secondAttribute="bottom" constant="23" id="GUY-wh-9Xk"/>
+                            <constraint firstItem="W45-XI-GfB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kfr-7k-ilO"/>
+                            <constraint firstAttribute="trailing" secondItem="W45-XI-GfB" secondAttribute="trailing" id="Qu7-PJ-o4q"/>
+                            <constraint firstItem="Ajf-Ha-BTL" firstAttribute="leading" secondItem="VC1-u4-rSJ" secondAttribute="leading" id="WPF-a6-Jg2"/>
+                            <constraint firstItem="u3d-XK-CBt" firstAttribute="trailing" secondItem="jBY-Ub-byE" secondAttribute="trailing" id="Xnr-T3-0Cl"/>
+                            <constraint firstItem="jBY-Ub-byE" firstAttribute="top" secondItem="u3d-XK-CBt" secondAttribute="bottom" constant="30" id="ZtU-oP-XqY"/>
+                            <constraint firstItem="VC1-u4-rSJ" firstAttribute="top" secondItem="Ajf-Ha-BTL" secondAttribute="bottom" constant="13" id="bc3-xC-IVK"/>
+                            <constraint firstItem="GL1-vE-IMU" firstAttribute="leading" secondItem="u3d-XK-CBt" secondAttribute="leading" id="cZY-sj-Sdd"/>
+                            <constraint firstItem="u3d-XK-CBt" firstAttribute="leading" secondItem="jBY-Ub-byE" secondAttribute="leading" id="efd-tc-foy"/>
+                            <constraint firstItem="GL1-vE-IMU" firstAttribute="top" secondItem="VC1-u4-rSJ" secondAttribute="bottom" constant="22" id="lu1-zG-ut2"/>
+                            <constraint firstItem="Ajf-Ha-BTL" firstAttribute="top" secondItem="W45-XI-GfB" secondAttribute="bottom" constant="19" id="wu1-W4-JCX"/>
+                            <constraint firstItem="VC1-u4-rSJ" firstAttribute="leading" secondItem="GL1-vE-IMU" secondAttribute="leading" id="yfG-KL-jaJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="VC1-u4-rSJ" id="bEP-KO-4bS"/>
+                        <outlet property="skillSlider" destination="u3d-XK-CBt" id="f6I-Wq-Boc"/>
+                        <outlet property="welcomeLabel" destination="jBY-Ub-byE" id="GO8-Wd-oGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="387"/>
+        </scene>
+    </scenes>
+</document>
