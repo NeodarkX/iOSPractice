@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSNameKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKg-uh-rOr">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Name Keeper" id="F2Q-GC-2ma"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-no-fZB">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="TUm-yb-fS5">
+                                        <connections>
+                                            <action selector="trashButtonAction:" destination="BYZ-38-t0r" id="zfY-jv-ccz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ExB-e3-jdJ"/>
+                                    <barButtonItem systemItem="save" id="sZD-Rd-jCC">
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="BYZ-38-t0r" id="fzV-pq-6a9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name to Keep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-J1-jkW">
+                                <rect key="frame" x="20" y="94" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prefered Platform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8D-Gr-HK5">
+                                <rect key="frame" x="20" y="193" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8l8-Dc-Ncw">
+                                <rect key="frame" x="20" y="136" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1P-N7-5YH">
+                                <rect key="frame" x="0.0" y="253" width="600" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q1P-N7-5YH" firstAttribute="top" secondItem="t8D-Gr-HK5" secondAttribute="bottom" constant="39" id="0Tr-Yt-DDP"/>
+                            <constraint firstItem="LKg-uh-rOr" firstAttribute="centerX" secondItem="8l8-Dc-Ncw" secondAttribute="centerX" id="1kQ-FZ-N0i"/>
+                            <constraint firstItem="8l8-Dc-Ncw" firstAttribute="leading" secondItem="t8D-Gr-HK5" secondAttribute="leading" id="1uu-hs-JDw"/>
+                            <constraint firstItem="JNh-J1-jkW" firstAttribute="top" secondItem="LKg-uh-rOr" secondAttribute="bottom" constant="30" id="39W-sz-JZ6"/>
+                            <constraint firstItem="q1P-N7-5YH" firstAttribute="leading" secondItem="JMs-no-fZB" secondAttribute="leading" id="76w-u0-KCm"/>
+                            <constraint firstItem="8l8-Dc-Ncw" firstAttribute="top" secondItem="JNh-J1-jkW" secondAttribute="bottom" constant="21" id="8CO-R1-Or3"/>
+                            <constraint firstItem="JMs-no-fZB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="9NQ-k3-IWa"/>
+                            <constraint firstItem="LKg-uh-rOr" firstAttribute="trailing" secondItem="q1P-N7-5YH" secondAttribute="trailing" id="CcL-EZ-zf0"/>
+                            <constraint firstItem="LKg-uh-rOr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fha-DW-pfg"/>
+                            <constraint firstItem="JNh-J1-jkW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zed-Mb-mbG"/>
+                            <constraint firstItem="LKg-uh-rOr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c84-tC-Obl"/>
+                            <constraint firstItem="q1P-N7-5YH" firstAttribute="trailing" secondItem="JMs-no-fZB" secondAttribute="trailing" id="eLz-jD-tXS"/>
+                            <constraint firstAttribute="trailing" secondItem="LKg-uh-rOr" secondAttribute="trailing" id="f1S-IQ-pws"/>
+                            <constraint firstItem="JNh-J1-jkW" firstAttribute="leading" secondItem="8l8-Dc-Ncw" secondAttribute="leading" id="gS7-nq-szV"/>
+                            <constraint firstItem="LKg-uh-rOr" firstAttribute="leading" secondItem="q1P-N7-5YH" secondAttribute="leading" id="kfh-0K-jc6"/>
+                            <constraint firstItem="t8D-Gr-HK5" firstAttribute="top" secondItem="8l8-Dc-Ncw" secondAttribute="bottom" constant="27" id="nTQ-Jq-qa0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="8l8-Dc-Ncw" id="Ibz-UC-Sfb"/>
+                        <outlet property="platformPickerView" destination="q1P-N7-5YH" id="fpy-uf-HuF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
