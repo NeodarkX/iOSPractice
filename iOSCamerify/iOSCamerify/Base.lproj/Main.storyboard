@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSCamerify" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs1-hz-MWK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rwK-76-DGN"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Camerify" id="YgG-v6-J0g">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="Ew9-S4-eKe">
+                                            <connections>
+                                                <action selector="takeAPhotoAction:" destination="BYZ-38-t0r" id="FXS-55-EhC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dy3-uS-GLD">
+                                <rect key="frame" x="0.0" y="89" width="600" height="491"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dy3-uS-GLD" firstAttribute="top" secondItem="Zs1-hz-MWK" secondAttribute="bottom" constant="25" id="Bn3-2S-Sy2"/>
+                            <constraint firstItem="Zs1-hz-MWK" firstAttribute="trailing" secondItem="Dy3-uS-GLD" secondAttribute="trailing" id="NRq-fQ-mkf"/>
+                            <constraint firstItem="Zs1-hz-MWK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UE0-lD-6wN"/>
+                            <constraint firstAttribute="bottom" secondItem="Dy3-uS-GLD" secondAttribute="bottom" constant="20" symbolic="YES" id="Z9j-cc-2yT"/>
+                            <constraint firstItem="Zs1-hz-MWK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bYG-FC-esY"/>
+                            <constraint firstItem="Zs1-hz-MWK" firstAttribute="leading" secondItem="Dy3-uS-GLD" secondAttribute="leading" id="cHH-IH-G6u"/>
+                            <constraint firstAttribute="trailing" secondItem="Zs1-hz-MWK" secondAttribute="trailing" id="lhW-JJ-QQF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="Dy3-uS-GLD" id="QXJ-DN-xhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default-image.png" width="640" height="480"/>
+    </resources>
+</document>
